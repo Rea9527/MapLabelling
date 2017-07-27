@@ -12,10 +12,18 @@
 
 <script>
   import MainLayout from '../layouts/main.vue'
+  // import Caman from 'caman'
+  Caman= require('caman')
 
   export default {
     components: {
       MainLayout
+    },
+
+    methods: {
+      loadImg: function() {
+        Caman();
+      }
     }
   }
 </script>

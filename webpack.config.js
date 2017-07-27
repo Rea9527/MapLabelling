@@ -13,7 +13,8 @@ module.exports = {
       'vue-router',
       './env'
     ]
-	},
+  },
+  target: 'web',
 	output: {
 		path: path.resolve(__dirname, './dist'),
     filename: '[name].js',
@@ -40,6 +41,10 @@ module.exports = {
       {
         test: /\.json$/,
         loader: 'json-loader'
+      },
+      {
+        test: /\.node$/,
+        loader: 'node-loader'
       },
       { test: /\.html$/, loader: 'raw' },
       { test: /\.css$/, loader: ExtractTextPlugin.extract('style-loader','css-loader') },
